@@ -9,7 +9,7 @@
 :root{
   --bg:#0d1020;--panel:#161a30;--panel2:#1d2240;--line:#2a3058;--text:#eef0ff;--mute:#9aa3d0;--dim:#6b739f;
   --next:#7c6cff;--live:#ff4d6d;--ok:#2ee6a6;
-  --PL:#a78bfa;--LL:#ff8a4c;--SA:#4ea1ff;--BL:#ff5c6c;--L1:#2ee6c8;--CL:#ffd24a;--CUP:#7bdc6b;
+  --PL:#a78bfa;--LL:#ff8a4c;--SA:#4ea1ff;--BL:#ff5c6c;--L1:#2ee6c8;--CL:#ffd24a;--CUP:#7bdc6b;--EL:#ff6fb5;
 }
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(1200px 500px at 50% -150px,#2a2370 0%,var(--bg) 60%) no-repeat,var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -87,7 +87,7 @@ h1 span{background:linear-gradient(90deg,#a78bfa,#2ee6c8);-webkit-background-cli
 </div>
 <button id="jump">↓ Jump to next match</button>
 <script>
-const LEAGUES={"Premier League":["PL","--PL"],"La Liga":["LL","--LL"],"Serie A":["SA","--SA"],"Bundesliga":["BL","--BL"],"Ligue 1":["L1","--L1"],"Champions League":["CL","--CL"],"EFL Cup":["CUP","--CUP"]};
+const LEAGUES={"Premier League":["PL","--PL"],"La Liga":["LL","--LL"],"Serie A":["SA","--SA"],"Bundesliga":["BL","--BL"],"Ligue 1":["L1","--L1"],"Champions League":["CL","--CL"],"EFL Cup":["CUP","--CUP"],"Europa League":["EL","--EL"],"FA Cup":["PL","--PL"],"Copa del Rey":["LL","--LL"],"Coppa Italia":["SA","--SA"],"DFB-Pokal":["BL","--BL"],"Coupe de France":["L1","--L1"]};
 const TBC_MS=12*3600e3,STALE_MS=36*3600e3,REFRESH_MS=600e3;
 const $=id=>document.getElementById(id);
 let data=null,filter="All",firstRender=true,important=true;

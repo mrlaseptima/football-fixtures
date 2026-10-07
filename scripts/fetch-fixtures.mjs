@@ -10,10 +10,35 @@ const norm = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 const TRACKED = ["manchester united", "liverpool", "arsenal", "manchester city", "chelsea", "tottenham", "real madrid", "barcelona", "atletico", "sevilla", "valencia", "juventus", "milan", "inter", "roma", "napoli", "bayern", "dortmund", "leipzig", "schalke", "paris saint", "marseille", "lyon", "monaco"];
 const tracked = (n) => TRACKED.some((t) => norm(n).includes(t));
 
+// Optional competitions: only on paid football-data.org plans (free key gets 403 and they are skipped).
+// Codes are discovered by name from /v4/competitions instead of hard-coded.
+const OPTIONAL = [
+  [/europa league/i, "Europa League"], [/^fa cup$/i, "FA Cup"], [/copa del rey/i, "Copa del Rey"],
+  [/coppa italia/i, "Coppa Italia"], [/dfb.?pokal/i, "DFB-Pokal"], [/coupe de france/i, "Coupe de France"],
+  [/^(efl|league) cup$/i, "EFL Cup"],
+];
+const get = (path) => fetch(`https://api.football-data.org/v4/${path}`, { headers: { "X-Auth-Token": token } });
+const pause = () => new Promise((r) => setTimeout(r, 7000)); // free tier: 10 req/min
+
+const comps = Object.entries(COMPS).map(([code, name]) => ({ code, name, required: true }));
+const list = await get("competitions");
+if (list.ok) {
+  for (const c of (await list.json()).competitions) {
+    const hit = OPTIONAL.find(([re]) => re.test(c.name) && !/conference/i.test(c.name));
+    if (hit && !comps.some((x) => x.name === hit[1])) comps.push({ code: c.code, name: hit[1], required: false });
+  }
+}
+await pause();
+
 const matches = [];
-for (const [code, name] of Object.entries(COMPS)) {
-  const res = await fetch(`https://api.football-data.org/v4/competitions/${code}/matches?status=SCHEDULED,TIMED,IN_PLAY,PAUSED`, { headers: { "X-Auth-Token": token } });
-  if (!res.ok) throw new Error(`${code}: HTTP ${res.status}`);
+for (const { code, name, required } of comps) {
+  const res = await get(`competitions/${code}/matches?status=SCHEDULED,TIMED,IN_PLAY,PAUSED`);
+  if (!res.ok) {
+    if (required) throw new Error(`${code}: HTTP ${res.status}`);
+    console.warn(`skipped ${name} (${code}): HTTP ${res.status}, not on this plan`);
+    await pause();
+    continue;
+  }
   for (const m of (await res.json()).matches) {
     if (!m.homeTeam.name || !m.awayTeam.name) continue; // TBD knockout slots
     matches.push({
@@ -25,7 +50,7 @@ for (const [code, name] of Object.entries(COMPS)) {
       important: tracked(m.homeTeam.name) || tracked(m.awayTeam.name),
     });
   }
-  await new Promise((r) => setTimeout(r, 7000)); // free tier: 10 req/min
+  await pause();
 }
 matches.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
 const next = JSON.stringify({ source: "football-data.org", matches }, null, 1);
