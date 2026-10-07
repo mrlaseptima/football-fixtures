@@ -20,6 +20,14 @@ h1 span{background:linear-gradient(90deg,#a78bfa,#2ee6c8);-webkit-background-cli
 .sub{color:var(--mute);font-size:12px;margin-top:2px}
 .pill{border:1px solid var(--line);border-radius:99px;padding:4px 11px;font-size:12px;color:var(--mute);background:transparent;cursor:pointer;font-family:inherit}
 .pill:hover{border-color:var(--next);color:var(--text)}
+.ctl{display:flex;align-items:center;gap:12px}
+.sw{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mute);cursor:pointer;user-select:none}
+.sw input{position:absolute;opacity:0}
+.trk{width:34px;height:20px;border-radius:99px;background:var(--line);position:relative;transition:background .15s}
+.trk::after{content:"";position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;background:#fff;transition:transform .15s}
+.sw input:checked+.trk{background:var(--next)}
+.sw input:checked+.trk::after{transform:translateX(14px)}
+.sw input:focus-visible+.trk{outline:2px solid var(--text);outline-offset:2px}
 .chips{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}
 .chip{--c:var(--next)}
 .chip.on{background:color-mix(in srgb,var(--c) 22%,transparent);border-color:var(--c);color:var(--text)}
@@ -48,13 +56,10 @@ h1 span{background:linear-gradient(90deg,#a78bfa,#2ee6c8);-webkit-background-cli
 .rem{font-variant-numeric:tabular-nums;color:var(--mute);font-size:13px}
 .b{font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;display:inline-block}
 .b.ps{background:#242a4d;color:var(--dim)}
-.b.lv{background:var(--live);color:#fff;animation:p 1.4s infinite}
 .b.nx{background:var(--next);color:#fff}
 .r.passed{opacity:.42;filter:grayscale(.6)}
 .r.next{background:color-mix(in srgb,var(--c) 16%,var(--panel));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 55%,transparent)}
-.r.live{background:color-mix(in srgb,var(--live) 12%,var(--panel))}
 .empty{padding:30px;text-align:center;color:var(--mute)}
-@keyframes p{50%{opacity:.55}}
 #jump{position:fixed;right:16px;bottom:16px;background:var(--next);color:#fff;border:0;border-radius:99px;padding:11px 18px;font-weight:600;font-size:13px;cursor:pointer;box-shadow:0 6px 24px #0008;font-family:inherit}
 #jump:hover{filter:brightness(1.12)}
 @media(max-width:720px){
@@ -71,7 +76,7 @@ h1 span{background:linear-gradient(90deg,#a78bfa,#2ee6c8);-webkit-background-cli
 <div class="wrap">
   <header>
     <div><h1>Football <span>fixtures</span></h1><div class="sub" id="meta">Loading…</div></div>
-    <button class="pill" id="refresh" title="Reload fixtures now">↻ Refresh</button>
+    <div class="ctl"><label class="sw" title="On: only the tracked big clubs. Off: every match the data source returns."><input type="checkbox" id="imp" checked><span class="trk"></span>Important matches</label><button class="pill" id="refresh" title="Reload fixtures now">↻ Refresh</button></div>
   </header>
   <div class="chips" id="chips"></div>
   <div id="banner"></div>
@@ -81,12 +86,12 @@ h1 span{background:linear-gradient(90deg,#a78bfa,#2ee6c8);-webkit-background-cli
 <button id="jump">↓ Jump to next match</button>
 <script>
 const LEAGUES={"Premier League":["PL","--PL"],"La Liga":["LL","--LL"],"Serie A":["SA","--SA"],"Bundesliga":["BL","--BL"],"Ligue 1":["L1","--L1"],"Champions League":["CL","--CL"],"EFL Cup":["CUP","--CUP"]};
-const MATCH_MS=2*3600e3,TBC_MS=12*3600e3,STALE_MS=36*3600e3,REFRESH_MS=600e3;
+const TBC_MS=12*3600e3,STALE_MS=36*3600e3,REFRESH_MS=600e3;
 const $=id=>document.getElementById(id);
-let data=null,filter="All",firstRender=true;
+let data=null,filter="All",firstRender=true,important=true;
+try{important=localStorage.getItem("importantOnly")!=="0"}catch(e){}
 const col=c=>`var(${(LEAGUES[c]||["","--next"])[1]})`;
-const isPassed=(m,now)=>now>m.t+(m.timeConfirmed?MATCH_MS:TBC_MS);
-const isLive=(m,now)=>m.timeConfirmed&&now>=m.t&&now<=m.t+MATCH_MS;
+const isPassed=(m,now)=>now>m.t+(m.timeConfirmed?0:TBC_MS);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function hue(n){let h=0;for(const ch of n)h=(h*31+ch.charCodeAt(0))%360;return h}
 function crest(t){
@@ -111,7 +116,8 @@ function nextMatch(list,now){return list.find(m=>!isPassed(m,now))}
 function render(){
   if(!data)return;
   const keepY=scrollY,now=Date.now();
-  const all=data.matches.map(m=>({...m,t:Date.parse(m.kickoff)})).sort((a,b)=>a.t-b.t);
+  const all=data.matches.filter(m=>!important||m.important!==false).map(m=>({...m,t:Date.parse(m.kickoff)})).sort((a,b)=>a.t-b.t);
+  if(filter!=="All"&&!all.some(m=>m.competition===filter))filter="All";
   const list=filter==="All"?all:all.filter(m=>m.competition===filter);
   const nx=nextMatch(list,now);
   // chips
@@ -121,7 +127,7 @@ function render(){
   const h=$("hero");
   if(nx){
     h.hidden=false;h.style.setProperty("--c",col(nx.competition));
-    h.innerHTML=`<div><div class="lbl">${isLive(nx,now)?"Live now":"Next match"} · ${esc(nx.competition)}</div><div class="vs">${crest(nx.home)}<span>${esc(nx.home.name)}</span><span class="vsx">vs</span><span>${esc(nx.away.name)}</span>${crest(nx.away)}</div></div><div class="cd"><span data-k="${nx.t}" data-s="1">${fmtRem(nx.t-now,1)}</span><small>${nx.timeConfirmed?"until kickoff":"until match day · time TBC"}</small></div>`;
+    h.innerHTML=`<div><div class="lbl">Next match · ${esc(nx.competition)}</div><div class="vs">${crest(nx.home)}<span>${esc(nx.home.name)}</span><span class="vsx">vs</span><span>${esc(nx.away.name)}</span>${crest(nx.away)}</div></div><div class="cd"><span data-k="${nx.t}" data-s="1">${fmtRem(nx.t-now,1)}</span><small>${nx.timeConfirmed?"until kickoff":"until match day · time TBC"}</small></div>`;
   }else h.hidden=true;
   // table
   let html=`<div class="r h"><span>Date</span><span style="text-align:right">Team 1</span><span></span><span>Team 2</span><span>League</span><span>Time</span><span>Remaining</span></div>`;
@@ -129,9 +135,9 @@ function render(){
   for(const m of list){
     const d=new Date(m.t),mon=monFmt.format(d);
     if(mon!==lastMon){html+=`<div class="mon">${mon}</div>`;lastMon=mon}
-    const passed=isPassed(m,now),live=isLive(m,now),isNext=m===nx&&!live;
-    const cls=["r",passed&&"passed",live&&"live",isNext&&"next"].filter(Boolean).join(" ");
-    const status=passed?`<span class="b ps">Passed</span>`:live?`<span class="b lv">Live</span>`:isNext?`<span class="b nx" data-k="${m.t}">${fmtRem(m.t-now)}</span>`:`<span class="rem" data-k="${m.t}">${fmtRem(m.t-now)}</span>`;
+    const passed=isPassed(m,now),isNext=m===nx;
+    const cls=["r",passed&&"passed",isNext&&"next"].filter(Boolean).join(" ");
+    const status=passed?`<span class="b ps">Passed</span>`:isNext?`<span class="b nx" data-k="${m.t}">${fmtRem(m.t-now)}</span>`:`<span class="rem" data-k="${m.t}">${fmtRem(m.t-now)}</span>`;
     html+=`<div class="${cls}" style="--c:${col(m.competition)}"${isNext?' id="nextRow"':""}>
       <div class="d"><b>${dayFmt.format(d)}</b><small>${d.getFullYear()}</small></div>
       <div class="t a a1"><span>${esc(m.home.name)}</span>${crest(m.home)}</div><span class="vsx">v</span>
@@ -163,6 +169,8 @@ async function load(){
   }catch(e){if(!data)$("meta").textContent="Couldn't load fixtures. Try refreshing."}
 }
 $("chips").onclick=e=>{const b=e.target.closest("[data-c]");if(b){filter=b.dataset.c;render();jump("auto")}};
+$("imp").checked=important;
+$("imp").onchange=e=>{important=e.target.checked;try{localStorage.setItem("importantOnly",important?"1":"0")}catch(_){}render();jump("auto")};
 $("jump").onclick=()=>jump();
 $("refresh").onclick=load;
 load();setInterval(tick,1000);setInterval(load,REFRESH_MS);

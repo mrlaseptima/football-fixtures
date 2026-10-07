@@ -50,7 +50,7 @@ for (const line of text.split("\n")) {
   const tm = time.match(/^(\d{1,2}):(\d\d)/);
   const confirmed = !!tm && !/unconfirmed/.test(time) && !/standard slot/.test(time);
   const utc = tm ? toUtc(y, m, d, +tm[1], +tm[2], zone) : toUtc(y, m, d, 12, 0, zone);
-  out.push({ kickoff: utc, timeConfirmed: confirmed, home: { name: home, crest: crest(home) }, away: { name: away, crest: crest(away) }, competition: comp.replace(/ MD\d+$/, "").replace(/,.*$/, "") });
+  out.push({ kickoff: utc, timeConfirmed: confirmed, home: { name: home, crest: crest(home) }, away: { name: away, crest: crest(away) }, important: true, competition: comp.replace(/ MD\d+$/, "").replace(/,.*$/, "") });
 }
 out.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
 const key = (m) => `${m.kickoff.slice(0, 10)}|${m.home.name}|${m.away.name}`;

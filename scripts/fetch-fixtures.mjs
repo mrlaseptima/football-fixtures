@@ -1,4 +1,4 @@
-// Pulls upcoming matches for the tracked clubs from football-data.org and rewrites fixtures.json.
+// Pulls all upcoming matches from football-data.org and rewrites fixtures.json.
 // Needs env FOOTBALL_DATA_TOKEN. On any failure it exits non-zero and leaves fixtures.json untouched.
 import { readFileSync, writeFileSync } from "node:fs";
 
@@ -16,13 +16,13 @@ for (const [code, name] of Object.entries(COMPS)) {
   if (!res.ok) throw new Error(`${code}: HTTP ${res.status}`);
   for (const m of (await res.json()).matches) {
     if (!m.homeTeam.name || !m.awayTeam.name) continue; // TBD knockout slots
-    if (!tracked(m.homeTeam.name) && !tracked(m.awayTeam.name)) continue;
     matches.push({
       kickoff: new Date(m.utcDate).toISOString(),
       timeConfirmed: m.status === "TIMED" || m.status === "IN_PLAY" || m.status === "PAUSED",
       home: { name: m.homeTeam.shortName || m.homeTeam.name, crest: m.homeTeam.crest },
       away: { name: m.awayTeam.shortName || m.awayTeam.name, crest: m.awayTeam.crest },
       competition: name,
+      important: tracked(m.homeTeam.name) || tracked(m.awayTeam.name),
     });
   }
   await new Promise((r) => setTimeout(r, 7000)); // free tier: 10 req/min
