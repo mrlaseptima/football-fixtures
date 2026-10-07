@@ -57,6 +57,8 @@ h1 span{background:linear-gradient(90deg,#a78bfa,#2ee6c8);-webkit-background-cli
 .b{font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;display:inline-block}
 .b.ps{background:#242a4d;color:var(--dim)}
 .b.nx{background:var(--next);color:#fff}
+.r.unimp{background:#1b1e2b;--c:#6b7280;filter:grayscale(1)}
+.r.unimp.next{background:#262a3a}
 .r.passed{opacity:.42;filter:grayscale(.6)}
 .r.next{background:color-mix(in srgb,var(--c) 16%,var(--panel));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 55%,transparent)}
 .empty{padding:30px;text-align:center;color:var(--mute)}
@@ -136,9 +138,9 @@ function render(){
     const d=new Date(m.t),mon=monFmt.format(d);
     if(mon!==lastMon){html+=`<div class="mon">${mon}</div>`;lastMon=mon}
     const passed=isPassed(m,now),isNext=m===nx;
-    const cls=["r",passed&&"passed",isNext&&"next"].filter(Boolean).join(" ");
+    const cls=["r",passed&&"passed",m.important===false&&"unimp",isNext&&"next"].filter(Boolean).join(" ");
     const status=passed?`<span class="b ps">Passed</span>`:isNext?`<span class="b nx" data-k="${m.t}">${fmtRem(m.t-now)}</span>`:`<span class="rem" data-k="${m.t}">${fmtRem(m.t-now)}</span>`;
-    html+=`<div class="${cls}" style="--c:${col(m.competition)}"${isNext?' id="nextRow"':""}>
+    html+=`<div class="${cls}" ${m.important===false?"":` style="--c:${col(m.competition)}"`}${isNext?' id="nextRow"':""}>
       <div class="d"><b>${dayFmt.format(d)}</b><small>${d.getFullYear()}</small></div>
       <div class="t a a1"><span>${esc(m.home.name)}</span>${crest(m.home)}</div><span class="vsx">v</span>
       <div class="t a2">${crest(m.away)}<span>${esc(m.away.name)}</span></div>
