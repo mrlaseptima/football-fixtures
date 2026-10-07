@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Football fixtures</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%236d5ae6'/%3E%3Cpath d='M16 8l6 4-2 7h-8l-2-7z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0d1020;--panel:#161a30;--panel2:#1d2240;--line:#2a3058;--text:#eef0ff;--mute:#9aa3d0;--dim:#6b739f;
+  --next:#7c6cff;--live:#ff4d6d;--ok:#2ee6a6;
+  --PL:#a78bfa;--LL:#ff8a4c;--SA:#4ea1ff;--BL:#ff5c6c;--L1:#2ee6c8;--CL:#ffd24a;--CUP:#7bdc6b;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 500px at 50% -150px,#2a2370 0%,var(--bg) 60%) no-repeat,var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:20px 14px 90px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+h1{margin:0;font-size:24px;font-weight:600;letter-spacing:-.3px}
+h1 span{background:linear-gradient(90deg,#a78bfa,#2ee6c8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mute);font-size:12px;margin-top:2px}
+.pill{border:1px solid var(--line);border-radius:99px;padding:4px 11px;font-size:12px;color:var(--mute);background:transparent;cursor:pointer;font-family:inherit}
+.pill:hover{border-color:var(--next);color:var(--text)}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}
+.chip{--c:var(--next)}
+.chip.on{background:color-mix(in srgb,var(--c) 22%,transparent);border-color:var(--c);color:var(--text)}
+.chip i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c);margin-right:6px}
+.hero{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 18px;border-radius:16px;border:1px solid color-mix(in srgb,var(--c,var(--next)) 60%,transparent);background:linear-gradient(120deg,color-mix(in srgb,var(--c,var(--next)) 28%,var(--panel)),var(--panel) 70%)}
+.hero .lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--mute)}
+.hero .vs{display:flex;align-items:center;gap:12px;margin-top:6px;font-size:18px;font-weight:600;flex-wrap:wrap}
+.hero .cd{font-size:30px;font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
+.hero .cd small{display:block;font-size:11px;font-weight:400;color:var(--mute);letter-spacing:.5px}
+.crest{width:28px;height:28px;object-fit:contain;flex:none}
+.hero .crest{width:42px;height:42px}
+.badge{display:inline-flex;width:28px;height:28px;border-radius:50%;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex:none}
+.hero .badge{width:42px;height:42px;font-size:13px}
+.banner{margin:12px 0;padding:8px 12px;border-radius:10px;background:#3a2a10;border:1px solid #7a5a1a;color:#ffd78a;font-size:12px}
+.tbl{margin-top:16px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel)}
+.r{display:grid;grid-template-columns:92px 1fr 18px 1fr 130px 64px 104px;gap:10px;align-items:center;padding:10px 14px;border-top:1px solid var(--line);border-left:4px solid var(--c,transparent)}
+.r.h{position:sticky;top:0;z-index:2;background:var(--panel2);border-top:none;border-left-color:transparent;color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.8px}
+.mon{padding:7px 14px;font-size:12px;font-weight:600;color:var(--mute);background:var(--panel2);border-top:1px solid var(--line);letter-spacing:.5px}
+.t{display:flex;align-items:center;gap:9px;min-width:0;font-weight:500}
+.t span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.t.a{justify-content:flex-end;text-align:right}
+.vsx{color:var(--dim);font-size:12px;text-align:center}
+.lg{font-size:12px;font-weight:600;color:var(--c)}
+.d b{display:block;font-weight:600}.d small{color:var(--dim);font-size:11px}
+.tm{font-variant-numeric:tabular-nums}.tm.tbc{color:var(--dim)}
+.rem{font-variant-numeric:tabular-nums;color:var(--mute);font-size:13px}
+.b{font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;display:inline-block}
+.b.ps{background:#242a4d;color:var(--dim)}
+.b.lv{background:var(--live);color:#fff;animation:p 1.4s infinite}
+.b.nx{background:var(--next);color:#fff}
+.r.passed{opacity:.42;filter:grayscale(.6)}
+.r.next{background:color-mix(in srgb,var(--c) 16%,var(--panel));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 55%,transparent)}
+.r.live{background:color-mix(in srgb,var(--live) 12%,var(--panel))}
+.empty{padding:30px;text-align:center;color:var(--mute)}
+@keyframes p{50%{opacity:.55}}
+#jump{position:fixed;right:16px;bottom:16px;background:var(--next);color:#fff;border:0;border-radius:99px;padding:11px 18px;font-weight:600;font-size:13px;cursor:pointer;box-shadow:0 6px 24px #0008;font-family:inherit}
+#jump:hover{filter:brightness(1.12)}
+@media(max-width:720px){
+  .r.h{display:none}
+  .r{grid-template-columns:1fr 16px 1fr;grid-template-areas:"a x b" "d d d" "l l s";row-gap:6px;padding:12px}
+  .r>.d{grid-area:d;display:flex;gap:8px;align-items:baseline}.d b{display:inline}
+  .r>.lg{grid-area:l}.r>.tm{display:none}.r>.rem{grid-area:s;text-align:right}
+  .r>.a1{grid-area:a}.r>.vsx{grid-area:x}.r>.a2{grid-area:b}
+  .hero .cd{text-align:left;font-size:26px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div><h1>Football <span>fixtures</span></h1><div class="sub" id="meta">Loading…</div></div>
+    <button class="pill" id="refresh" title="Reload fixtures now">↻ Refresh</button>
+  </header>
+  <div class="chips" id="chips"></div>
+  <div id="banner"></div>
+  <div class="hero" id="hero" hidden></div>
+  <div class="tbl" id="tbl"></div>
+</div>
+<button id="jump">↓ Jump to next match</button>
+<script>
+const LEAGUES={"Premier League":["PL","--PL"],"La Liga":["LL","--LL"],"Serie A":["SA","--SA"],"Bundesliga":["BL","--BL"],"Ligue 1":["L1","--L1"],"Champions League":["CL","--CL"],"EFL Cup":["CUP","--CUP"]};
+const MATCH_MS=2*3600e3,TBC_MS=12*3600e3,STALE_MS=36*3600e3,REFRESH_MS=600e3;
+const $=id=>document.getElementById(id);
+let data=null,filter="All",firstRender=true;
+const col=c=>`var(${(LEAGUES[c]||["","--next"])[1]})`;
+const isPassed=(m,now)=>now>m.t+(m.timeConfirmed?MATCH_MS:TBC_MS);
+const isLive=(m,now)=>m.timeConfirmed&&now>=m.t&&now<=m.t+MATCH_MS;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function hue(n){let h=0;for(const ch of n)h=(h*31+ch.charCodeAt(0))%360;return h}
+function crest(t){
+  const ini=esc(t.name.split(/\s+/).map(w=>w[0]).join("").slice(0,2).toUpperCase());
+  const badge=`<span class="badge" style="background:hsl(${hue(t.name)} 55% 42%)">${ini}</span>`;
+  return t.crest?`<img class="crest" src="${esc(t.crest)}" alt="" loading="lazy" onerror="this.outerHTML=this.dataset.b" data-b="${esc(badge)}">`:badge;
+}
+function fmtRem(ms,sec){
+  if(ms<=0)return"now";
+  const s=Math.floor(ms/1e3),d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60),x=s%60;
+  if(sec)return`${d}d ${String(h).padStart(2,"0")}h ${String(m).padStart(2,"0")}m ${String(x).padStart(2,"0")}s`;
+  return d>0?`in ${d}d ${h}h`:h>0?`in ${h}h ${m}m`:`in ${m}m ${x}s`;
+}
+const dayFmt=new Intl.DateTimeFormat(undefined,{weekday:"short",day:"numeric",month:"short"});
+const yrFmt=new Intl.DateTimeFormat(undefined,{day:"numeric",month:"short",year:"numeric"});
+const timeFmt=new Intl.DateTimeFormat(undefined,{hour:"2-digit",minute:"2-digit"});
+const monFmt=new Intl.DateTimeFormat(undefined,{month:"long",year:"numeric"});
+const tz=Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+function nextMatch(list,now){return list.find(m=>!isPassed(m,now))}
+
+function render(){
+  if(!data)return;
+  const keepY=scrollY,now=Date.now();
+  const all=data.matches.map(m=>({...m,t:Date.parse(m.kickoff)})).sort((a,b)=>a.t-b.t);
+  const list=filter==="All"?all:all.filter(m=>m.competition===filter);
+  const nx=nextMatch(list,now);
+  // chips
+  const comps=[...new Set(all.map(m=>m.competition))].sort((a,b)=>Object.keys(LEAGUES).indexOf(a)-Object.keys(LEAGUES).indexOf(b));
+  $("chips").innerHTML=["All",...comps].map(c=>`<button class="pill chip ${c===filter?"on":""}" style="--c:${c==="All"?"var(--next)":col(c)}" data-c="${esc(c)}">${c==="All"?"":"<i></i>"}${esc(c)}</button>`).join("");
+  // hero
+  const h=$("hero");
+  if(nx){
+    h.hidden=false;h.style.setProperty("--c",col(nx.competition));
+    h.innerHTML=`<div><div class="lbl">${isLive(nx,now)?"Live now":"Next match"} · ${esc(nx.competition)}</div><div class="vs">${crest(nx.home)}<span>${esc(nx.home.name)}</span><span class="vsx">vs</span><span>${esc(nx.away.name)}</span>${crest(nx.away)}</div></div><div class="cd"><span data-k="${nx.t}" data-s="1">${fmtRem(nx.t-now,1)}</span><small>${nx.timeConfirmed?"until kickoff":"until match day · time TBC"}</small></div>`;
+  }else h.hidden=true;
+  // table
+  let html=`<div class="r h"><span>Date</span><span style="text-align:right">Team 1</span><span></span><span>Team 2</span><span>League</span><span>Time</span><span>Remaining</span></div>`;
+  let lastMon="";
+  for(const m of list){
+    const d=new Date(m.t),mon=monFmt.format(d);
+    if(mon!==lastMon){html+=`<div class="mon">${mon}</div>`;lastMon=mon}
+    const passed=isPassed(m,now),live=isLive(m,now),isNext=m===nx&&!live;
+    const cls=["r",passed&&"passed",live&&"live",isNext&&"next"].filter(Boolean).join(" ");
+    const status=passed?`<span class="b ps">Passed</span>`:live?`<span class="b lv">Live</span>`:isNext?`<span class="b nx" data-k="${m.t}">${fmtRem(m.t-now)}</span>`:`<span class="rem" data-k="${m.t}">${fmtRem(m.t-now)}</span>`;
+    html+=`<div class="${cls}" style="--c:${col(m.competition)}"${isNext?' id="nextRow"':""}>
+      <div class="d"><b>${dayFmt.format(d)}</b><small>${d.getFullYear()}</small></div>
+      <div class="t a a1"><span>${esc(m.home.name)}</span>${crest(m.home)}</div><span class="vsx">v</span>
+      <div class="t a2">${crest(m.away)}<span>${esc(m.away.name)}</span></div>
+      <span class="lg">${esc(m.competition)}</span>
+      <span class="tm ${m.timeConfirmed?"":"tbc"}">${m.timeConfirmed?timeFmt.format(d):"TBC"}</span>
+      ${status}</div>`;
+  }
+  $("tbl").innerHTML=list.length?html:`<div class="empty">No matches for this filter.</div>`;
+  // meta + stale banner
+  const upd=Date.parse(data.updated);
+  const ago=Math.max(0,Math.round((now-upd)/60e3));
+  $("meta").textContent=`${list.length} matches · times in ${tz} · updated ${ago<90?ago+" min":Math.round(ago/60)+" h"} ago`;
+  $("banner").innerHTML=now-upd>STALE_MS?`<div class="banner">Fixture data hasn't refreshed in over a day, so times may be out of date.</div>`:"";
+  if(firstRender){firstRender=false;jump("auto")}else scrollTo(0,keepY);
+}
+function jump(b){const el=$("nextRow");if(el)el.scrollIntoView({behavior:b==="auto"?"auto":"smooth",block:"center"})}
+function tick(){
+  const now=Date.now();
+  document.querySelectorAll("[data-k]").forEach(e=>{e.textContent=fmtRem(+e.dataset.k-now,e.dataset.s)});
+  // re-render when the next/passed/live state flips
+  if(data&&(tick.n=(tick.n||0)+1)%15===0)render();
+}
+async function load(){
+  try{
+    const r=await fetch("fixtures.json?"+Math.floor(Date.now()/60e3),{cache:"no-store"});
+    if(!r.ok)throw new Error(r.status);
+    data=await r.json();render();
+  }catch(e){if(!data)$("meta").textContent="Couldn't load fixtures. Try refreshing."}
+}
+$("chips").onclick=e=>{const b=e.target.closest("[data-c]");if(b){filter=b.dataset.c;render();jump("auto")}};
+$("jump").onclick=()=>jump();
+$("refresh").onclick=load;
+load();setInterval(tick,1000);setInterval(load,REFRESH_MS);
+</script>
+</body>
+</html>

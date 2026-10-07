@@ -1,0 +1,1423 @@
+{
+ "updated": "2026-10-07T10:21:08.994Z",
+ "source": "gist-seed",
+ "matches": [
+  {
+   "kickoff": "2026-10-10T16:30:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Manchester United",
+    "crest": "https://crests.football-data.org/66.png"
+   },
+   "away": {
+    "name": "Tottenham Hotspur",
+    "crest": "https://crests.football-data.org/73.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-10-11T15:30:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "away": {
+    "name": "Manchester City",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-10-13T19:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Galatasaray",
+    "crest": "https://crests.football-data.org/610.png"
+   },
+   "away": {
+    "name": "Barcelona",
+    "crest": "https://crests.football-data.org/81.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-10-13T19:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Viking",
+    "crest": null
+   },
+   "away": {
+    "name": "Bayern Munich",
+    "crest": "https://crests.football-data.org/5.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-10-13T19:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "RB Leipzig",
+    "crest": "https://crests.football-data.org/721.png"
+   },
+   "away": {
+    "name": "PSV Eindhoven",
+    "crest": "https://crests.football-data.org/674.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-10-14T16:45:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "LASK",
+    "crest": null
+   },
+   "away": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-10-14T16:45:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Bodo/Glimt",
+    "crest": null
+   },
+   "away": {
+    "name": "Borussia Dortmund",
+    "crest": "https://crests.football-data.org/4.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-10-17T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Bayern Munich",
+    "crest": "https://crests.football-data.org/5.png"
+   },
+   "away": {
+    "name": "RB Leipzig",
+    "crest": "https://crests.football-data.org/721.png"
+   },
+   "competition": "Bundesliga"
+  },
+  {
+   "kickoff": "2026-10-18T19:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Real Madrid",
+    "crest": "https://crests.football-data.org/86.png"
+   },
+   "away": {
+    "name": "Sevilla",
+    "crest": "https://crests.football-data.org/559.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2026-10-20T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "AS Roma",
+    "crest": "https://crests.football-data.org/100.png"
+   },
+   "away": {
+    "name": "Slovan Bratislava",
+    "crest": null
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-10-20T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Napoli",
+    "crest": "https://crests.football-data.org/113.png"
+   },
+   "away": {
+    "name": "Bodo/Glimt",
+    "crest": null
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-10-20T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Sabah",
+    "crest": null
+   },
+   "away": {
+    "name": "Borussia Dortmund",
+    "crest": "https://crests.football-data.org/4.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-10-21T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Inter Milan",
+    "crest": "https://crests.football-data.org/108.png"
+   },
+   "away": {
+    "name": "Shakhtar Donetsk",
+    "crest": null
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-10-24T16:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Napoli",
+    "crest": "https://crests.football-data.org/113.png"
+   },
+   "away": {
+    "name": "AS Roma",
+    "crest": "https://crests.football-data.org/100.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2026-10-24T16:30:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Chelsea",
+    "crest": "https://crests.football-data.org/61.png"
+   },
+   "away": {
+    "name": "Tottenham Hotspur",
+    "crest": "https://crests.football-data.org/73.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-10-25T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Paris Saint-Germain",
+    "crest": "https://crests.football-data.org/524.png"
+   },
+   "away": {
+    "name": "Lyon",
+    "crest": "https://crests.football-data.org/523.png"
+   },
+   "competition": "Ligue 1"
+  },
+  {
+   "kickoff": "2026-10-25T20:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Barcelona",
+    "crest": "https://crests.football-data.org/81.png"
+   },
+   "away": {
+    "name": "Real Madrid",
+    "crest": "https://crests.football-data.org/86.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2026-10-28T20:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "away": {
+    "name": "Chelsea",
+    "crest": "https://crests.football-data.org/61.png"
+   },
+   "competition": "EFL Cup"
+  },
+  {
+   "kickoff": "2026-10-31T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Schalke 04",
+    "crest": "https://crests.football-data.org/6.png"
+   },
+   "away": {
+    "name": "RB Leipzig",
+    "crest": "https://crests.football-data.org/721.png"
+   },
+   "competition": "Bundesliga"
+  },
+  {
+   "kickoff": "2026-10-31T12:30:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Chelsea",
+    "crest": "https://crests.football-data.org/61.png"
+   },
+   "away": {
+    "name": "Manchester United",
+    "crest": "https://crests.football-data.org/66.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-10-31T17:30:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Bayern Munich",
+    "crest": "https://crests.football-data.org/5.png"
+   },
+   "away": {
+    "name": "Borussia Dortmund",
+    "crest": "https://crests.football-data.org/4.png"
+   },
+   "competition": "Bundesliga"
+  },
+  {
+   "kickoff": "2026-10-31T19:45:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "AC Milan",
+    "crest": "https://crests.football-data.org/98.png"
+   },
+   "away": {
+    "name": "Inter Milan",
+    "crest": "https://crests.football-data.org/108.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2026-11-01T16:30:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "away": {
+    "name": "Arsenal",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-11-01T19:45:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Juventus",
+    "crest": "https://crests.football-data.org/109.png"
+   },
+   "away": {
+    "name": "Napoli",
+    "crest": "https://crests.football-data.org/113.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2026-11-03T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Feyenoord",
+    "crest": "https://crests.football-data.org/675.png"
+   },
+   "away": {
+    "name": "Inter Milan",
+    "crest": "https://crests.football-data.org/108.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-11-04T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Slavia Praha",
+    "crest": null
+   },
+   "away": {
+    "name": "Arsenal",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-11-04T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Porto",
+    "crest": "https://crests.football-data.org/503.png"
+   },
+   "away": {
+    "name": "Napoli",
+    "crest": "https://crests.football-data.org/113.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-11-08T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Valencia",
+    "crest": "https://crests.football-data.org/95.png"
+   },
+   "away": {
+    "name": "Real Madrid",
+    "crest": "https://crests.football-data.org/86.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2026-11-08T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Atletico Madrid",
+    "crest": "https://crests.football-data.org/78.png"
+   },
+   "away": {
+    "name": "Barcelona",
+    "crest": "https://crests.football-data.org/81.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2026-11-21T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "away": {
+    "name": "Manchester United",
+    "crest": "https://crests.football-data.org/66.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-11-24T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Real Madrid",
+    "crest": "https://crests.football-data.org/86.png"
+   },
+   "away": {
+    "name": "PSV Eindhoven",
+    "crest": "https://crests.football-data.org/674.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-11-25T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Atletico Madrid",
+    "crest": "https://crests.football-data.org/78.png"
+   },
+   "away": {
+    "name": "Viking",
+    "crest": null
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-11-25T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Sabah",
+    "crest": null
+   },
+   "away": {
+    "name": "Barcelona",
+    "crest": "https://crests.football-data.org/81.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-11-28T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Arsenal",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "away": {
+    "name": "Manchester City",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-11-29T19:45:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Lyon",
+    "crest": "https://crests.football-data.org/523.png"
+   },
+   "away": {
+    "name": "Monaco",
+    "crest": "https://crests.football-data.org/548.png"
+   },
+   "competition": "Ligue 1"
+  },
+  {
+   "kickoff": "2026-12-04T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Schalke 04",
+    "crest": "https://crests.football-data.org/6.png"
+   },
+   "away": {
+    "name": "Borussia Dortmund",
+    "crest": "https://crests.football-data.org/4.png"
+   },
+   "competition": "Bundesliga"
+  },
+  {
+   "kickoff": "2026-12-05T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Chelsea",
+    "crest": "https://crests.football-data.org/61.png"
+   },
+   "away": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-12-05T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Tottenham Hotspur",
+    "crest": "https://crests.football-data.org/73.png"
+   },
+   "away": {
+    "name": "Arsenal",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-12-08T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Bayern Munich",
+    "crest": "https://crests.football-data.org/5.png"
+   },
+   "away": {
+    "name": "Slavia Praha",
+    "crest": null
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-12-09T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "away": {
+    "name": "Porto",
+    "crest": "https://crests.football-data.org/503.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-12-09T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "PSV Eindhoven",
+    "crest": "https://crests.football-data.org/674.png"
+   },
+   "away": {
+    "name": "Atletico Madrid",
+    "crest": "https://crests.football-data.org/78.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2026-12-12T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Manchester City",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "away": {
+    "name": "Chelsea",
+    "crest": "https://crests.football-data.org/61.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-12-13T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Atletico Madrid",
+    "crest": "https://crests.football-data.org/78.png"
+   },
+   "away": {
+    "name": "Valencia",
+    "crest": "https://crests.football-data.org/95.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2026-12-13T13:45:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Lyon",
+    "crest": "https://crests.football-data.org/523.png"
+   },
+   "away": {
+    "name": "Marseille",
+    "crest": "https://crests.football-data.org/516.png"
+   },
+   "competition": "Ligue 1"
+  },
+  {
+   "kickoff": "2026-12-13T14:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Napoli",
+    "crest": "https://crests.football-data.org/113.png"
+   },
+   "away": {
+    "name": "AC Milan",
+    "crest": "https://crests.football-data.org/98.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2026-12-18T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "RB Leipzig",
+    "crest": "https://crests.football-data.org/721.png"
+   },
+   "away": {
+    "name": "Borussia Dortmund",
+    "crest": "https://crests.football-data.org/4.png"
+   },
+   "competition": "Bundesliga"
+  },
+  {
+   "kickoff": "2026-12-19T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Arsenal",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "away": {
+    "name": "Manchester United",
+    "crest": "https://crests.football-data.org/66.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-12-19T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "away": {
+    "name": "Tottenham Hotspur",
+    "crest": "https://crests.football-data.org/73.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2026-12-20T14:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "AS Roma",
+    "crest": "https://crests.football-data.org/100.png"
+   },
+   "away": {
+    "name": "Juventus",
+    "crest": "https://crests.football-data.org/109.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-01-02T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Manchester City",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "away": {
+    "name": "Tottenham Hotspur",
+    "crest": "https://crests.football-data.org/73.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-01-10T14:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Inter Milan",
+    "crest": "https://crests.football-data.org/108.png"
+   },
+   "away": {
+    "name": "Juventus",
+    "crest": "https://crests.football-data.org/109.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-01-10T14:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "AS Roma",
+    "crest": "https://crests.football-data.org/100.png"
+   },
+   "away": {
+    "name": "AC Milan",
+    "crest": "https://crests.football-data.org/98.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-01-19T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Real Madrid",
+    "crest": "https://crests.football-data.org/86.png"
+   },
+   "away": {
+    "name": "LASK",
+    "crest": null
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2027-01-19T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Bodo/Glimt",
+    "crest": null
+   },
+   "away": {
+    "name": "Atletico Madrid",
+    "crest": "https://crests.football-data.org/78.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2027-01-20T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "RB Leipzig",
+    "crest": "https://crests.football-data.org/721.png"
+   },
+   "away": {
+    "name": "Shakhtar Donetsk",
+    "crest": null
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2027-01-20T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Sabah",
+    "crest": null
+   },
+   "away": {
+    "name": "Napoli",
+    "crest": "https://crests.football-data.org/113.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2027-01-23T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Manchester United",
+    "crest": "https://crests.football-data.org/66.png"
+   },
+   "away": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-01-24T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Valencia",
+    "crest": "https://crests.football-data.org/95.png"
+   },
+   "away": {
+    "name": "Sevilla",
+    "crest": "https://crests.football-data.org/559.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2027-01-27T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Shakhtar Donetsk",
+    "crest": null
+   },
+   "away": {
+    "name": "Real Madrid",
+    "crest": "https://crests.football-data.org/86.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2027-01-27T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Arsenal",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "away": {
+    "name": "Sabah",
+    "crest": null
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2027-01-27T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Feyenoord",
+    "crest": "https://crests.football-data.org/675.png"
+   },
+   "away": {
+    "name": "RB Leipzig",
+    "crest": "https://crests.football-data.org/721.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2027-01-27T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Slovan Bratislava",
+    "crest": null
+   },
+   "away": {
+    "name": "Inter Milan",
+    "crest": "https://crests.football-data.org/108.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2027-01-27T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Napoli",
+    "crest": "https://crests.football-data.org/113.png"
+   },
+   "away": {
+    "name": "Viking",
+    "crest": null
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2027-01-27T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Paris Saint-Germain",
+    "crest": "https://crests.football-data.org/524.png"
+   },
+   "away": {
+    "name": "Galatasaray",
+    "crest": "https://crests.football-data.org/610.png"
+   },
+   "competition": "Champions League"
+  },
+  {
+   "kickoff": "2027-01-30T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Manchester City",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "away": {
+    "name": "Arsenal",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-01-31T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Barcelona",
+    "crest": "https://crests.football-data.org/81.png"
+   },
+   "away": {
+    "name": "Valencia",
+    "crest": "https://crests.football-data.org/95.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2027-01-31T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Monaco",
+    "crest": "https://crests.football-data.org/548.png"
+   },
+   "away": {
+    "name": "Paris Saint-Germain",
+    "crest": "https://crests.football-data.org/524.png"
+   },
+   "competition": "Ligue 1"
+  },
+  {
+   "kickoff": "2027-01-31T14:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "AC Milan",
+    "crest": "https://crests.football-data.org/98.png"
+   },
+   "away": {
+    "name": "Juventus",
+    "crest": "https://crests.football-data.org/109.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-01-31T14:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Napoli",
+    "crest": "https://crests.football-data.org/113.png"
+   },
+   "away": {
+    "name": "Inter Milan",
+    "crest": "https://crests.football-data.org/108.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-02-04T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Bayern Munich",
+    "crest": "https://crests.football-data.org/5.png"
+   },
+   "away": {
+    "name": "Schalke 04",
+    "crest": "https://crests.football-data.org/6.png"
+   },
+   "competition": "Bundesliga"
+  },
+  {
+   "kickoff": "2027-02-06T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Manchester United",
+    "crest": "https://crests.football-data.org/66.png"
+   },
+   "away": {
+    "name": "Chelsea",
+    "crest": "https://crests.football-data.org/61.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-02-06T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Arsenal",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "away": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-02-07T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Barcelona",
+    "crest": "https://crests.football-data.org/81.png"
+   },
+   "away": {
+    "name": "Atletico Madrid",
+    "crest": "https://crests.football-data.org/78.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2027-02-07T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Paris Saint-Germain",
+    "crest": "https://crests.football-data.org/524.png"
+   },
+   "away": {
+    "name": "Marseille",
+    "crest": "https://crests.football-data.org/516.png"
+   },
+   "competition": "Ligue 1"
+  },
+  {
+   "kickoff": "2027-02-10T20:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Tottenham Hotspur",
+    "crest": "https://crests.football-data.org/73.png"
+   },
+   "away": {
+    "name": "Manchester City",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-02-14T14:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Napoli",
+    "crest": "https://crests.football-data.org/113.png"
+   },
+   "away": {
+    "name": "Juventus",
+    "crest": "https://crests.football-data.org/109.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-02-14T14:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Inter Milan",
+    "crest": "https://crests.football-data.org/108.png"
+   },
+   "away": {
+    "name": "AC Milan",
+    "crest": "https://crests.football-data.org/98.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-02-21T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Sevilla",
+    "crest": "https://crests.football-data.org/559.png"
+   },
+   "away": {
+    "name": "Real Madrid",
+    "crest": "https://crests.football-data.org/86.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2027-02-26T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "RB Leipzig",
+    "crest": "https://crests.football-data.org/721.png"
+   },
+   "away": {
+    "name": "Bayern Munich",
+    "crest": "https://crests.football-data.org/5.png"
+   },
+   "competition": "Bundesliga"
+  },
+  {
+   "kickoff": "2027-02-27T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Manchester United",
+    "crest": "https://crests.football-data.org/66.png"
+   },
+   "away": {
+    "name": "Arsenal",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-02-27T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Tottenham Hotspur",
+    "crest": "https://crests.football-data.org/73.png"
+   },
+   "away": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-02-28T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Real Madrid",
+    "crest": "https://crests.football-data.org/86.png"
+   },
+   "away": {
+    "name": "Valencia",
+    "crest": "https://crests.football-data.org/95.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2027-03-05T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Borussia Dortmund",
+    "crest": "https://crests.football-data.org/4.png"
+   },
+   "away": {
+    "name": "Bayern Munich",
+    "crest": "https://crests.football-data.org/5.png"
+   },
+   "competition": "Bundesliga"
+  },
+  {
+   "kickoff": "2027-03-05T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "RB Leipzig",
+    "crest": "https://crests.football-data.org/721.png"
+   },
+   "away": {
+    "name": "Schalke 04",
+    "crest": "https://crests.football-data.org/6.png"
+   },
+   "competition": "Bundesliga"
+  },
+  {
+   "kickoff": "2027-03-06T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Monaco",
+    "crest": "https://crests.football-data.org/548.png"
+   },
+   "away": {
+    "name": "Lyon",
+    "crest": "https://crests.football-data.org/523.png"
+   },
+   "competition": "Ligue 1"
+  },
+  {
+   "kickoff": "2027-03-07T14:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Juventus",
+    "crest": "https://crests.football-data.org/109.png"
+   },
+   "away": {
+    "name": "AS Roma",
+    "crest": "https://crests.football-data.org/100.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-03-13T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Marseille",
+    "crest": "https://crests.football-data.org/516.png"
+   },
+   "away": {
+    "name": "Monaco",
+    "crest": "https://crests.football-data.org/548.png"
+   },
+   "competition": "Ligue 1"
+  },
+  {
+   "kickoff": "2027-03-13T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Chelsea",
+    "crest": "https://crests.football-data.org/61.png"
+   },
+   "away": {
+    "name": "Arsenal",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-03-20T12:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Manchester City",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "away": {
+    "name": "Manchester United",
+    "crest": "https://crests.football-data.org/66.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-03-21T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Marseille",
+    "crest": "https://crests.football-data.org/516.png"
+   },
+   "away": {
+    "name": "Lyon",
+    "crest": "https://crests.football-data.org/523.png"
+   },
+   "competition": "Ligue 1"
+  },
+  {
+   "kickoff": "2027-04-04T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Real Madrid",
+    "crest": "https://crests.football-data.org/86.png"
+   },
+   "away": {
+    "name": "Atletico Madrid",
+    "crest": "https://crests.football-data.org/78.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2027-04-04T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Barcelona",
+    "crest": "https://crests.football-data.org/81.png"
+   },
+   "away": {
+    "name": "Sevilla",
+    "crest": "https://crests.football-data.org/559.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2027-04-10T18:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Borussia Dortmund",
+    "crest": "https://crests.football-data.org/4.png"
+   },
+   "away": {
+    "name": "Schalke 04",
+    "crest": "https://crests.football-data.org/6.png"
+   },
+   "competition": "Bundesliga"
+  },
+  {
+   "kickoff": "2027-04-11T13:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Inter Milan",
+    "crest": "https://crests.football-data.org/108.png"
+   },
+   "away": {
+    "name": "AS Roma",
+    "crest": "https://crests.football-data.org/100.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-04-18T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Atletico Madrid",
+    "crest": "https://crests.football-data.org/78.png"
+   },
+   "away": {
+    "name": "Sevilla",
+    "crest": "https://crests.football-data.org/559.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2027-04-18T13:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "AC Milan",
+    "crest": "https://crests.football-data.org/98.png"
+   },
+   "away": {
+    "name": "Napoli",
+    "crest": "https://crests.football-data.org/113.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-04-23T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Borussia Dortmund",
+    "crest": "https://crests.football-data.org/4.png"
+   },
+   "away": {
+    "name": "RB Leipzig",
+    "crest": "https://crests.football-data.org/721.png"
+   },
+   "competition": "Bundesliga"
+  },
+  {
+   "kickoff": "2027-04-24T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Chelsea",
+    "crest": "https://crests.football-data.org/61.png"
+   },
+   "away": {
+    "name": "Manchester City",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-05-01T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "away": {
+    "name": "Chelsea",
+    "crest": "https://crests.football-data.org/61.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-05-01T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Arsenal",
+    "crest": "https://crests.football-data.org/57.png"
+   },
+   "away": {
+    "name": "Tottenham Hotspur",
+    "crest": "https://crests.football-data.org/73.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-05-02T13:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "AS Roma",
+    "crest": "https://crests.football-data.org/100.png"
+   },
+   "away": {
+    "name": "Napoli",
+    "crest": "https://crests.football-data.org/113.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-05-08T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Manchester City",
+    "crest": "https://crests.football-data.org/65.png"
+   },
+   "away": {
+    "name": "Liverpool",
+    "crest": "https://crests.football-data.org/64.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-05-08T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Tottenham Hotspur",
+    "crest": "https://crests.football-data.org/73.png"
+   },
+   "away": {
+    "name": "Chelsea",
+    "crest": "https://crests.football-data.org/61.png"
+   },
+   "competition": "Premier League"
+  },
+  {
+   "kickoff": "2027-05-09T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Real Madrid",
+    "crest": "https://crests.football-data.org/86.png"
+   },
+   "away": {
+    "name": "Barcelona",
+    "crest": "https://crests.football-data.org/81.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2027-05-09T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Valencia",
+    "crest": "https://crests.football-data.org/95.png"
+   },
+   "away": {
+    "name": "Atletico Madrid",
+    "crest": "https://crests.football-data.org/78.png"
+   },
+   "competition": "La Liga"
+  },
+  {
+   "kickoff": "2027-05-09T10:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Lyon",
+    "crest": "https://crests.football-data.org/523.png"
+   },
+   "away": {
+    "name": "Paris Saint-Germain",
+    "crest": "https://crests.football-data.org/524.png"
+   },
+   "competition": "Ligue 1"
+  },
+  {
+   "kickoff": "2027-05-16T13:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "Juventus",
+    "crest": "https://crests.football-data.org/109.png"
+   },
+   "away": {
+    "name": "Inter Milan",
+    "crest": "https://crests.football-data.org/108.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-05-16T13:00:00.000Z",
+   "timeConfirmed": true,
+   "home": {
+    "name": "AC Milan",
+    "crest": "https://crests.football-data.org/98.png"
+   },
+   "away": {
+    "name": "AS Roma",
+    "crest": "https://crests.football-data.org/100.png"
+   },
+   "competition": "Serie A"
+  },
+  {
+   "kickoff": "2027-05-23T11:00:00.000Z",
+   "timeConfirmed": false,
+   "home": {
+    "name": "Tottenham Hotspur",
+    "crest": "https://crests.football-data.org/73.png"
+   },
+   "away": {
+    "name": "Manchester United",
+    "crest": "https://crests.football-data.org/66.png"
+   },
+   "competition": "Premier League"
+  }
+ ]
+}
